@@ -1,0 +1,3 @@
+rootProject.name='recipes'
+include ':app'
+include ':lib_network'

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_marginBottom="5dp"
+    android:layout_height="100dp">
+    <ImageView
+        android:id="@+id/food_image"
+        android:src="@drawable/add_image"
+        android:layout_marginRight="5dp"
+        android:scaleType="centerInside"
+        android:layout_width="100dp"
+        android:layout_height="100dp"/>
+    <TextView
+        android:id="@+id/step_name"
+        android:layout_toRightOf="@id/food_image"
+        android:layout_marginTop="5dp"
+        android:textSize="15dp"
+        android:textColor="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <EditText
+        android:id="@+id/step_info"
+        android:layout_toRightOf="@id/food_image"
+        android:layout_below="@id/step_name"
+        android:textSize="14dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="5dp"
+        android:minLines="5"
+        android:maxLength="100"
+        android:gravity="top"
+        android:scrollbars="vertical"
+        android:hint="先在左侧添加图片，这里写下具体的制作步骤"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</RelativeLayout>

@@ -1,0 +1,132 @@
+<?xml version ="1.0" encoding ="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/home_fragment">
+    <fragment
+        android:id="@+id/home_fragment"
+        android:name="com.xiong.recipes.ui.home.HomeFragment"
+        android:label="home"
+        tools:layout="@layout/fragment_home"
+        >
+        <action
+            android:id="@+id/home_fragment_to_food_detail_fragment"
+            app:destination="@id/food_detail_fragment" />
+
+        <action
+            android:id="@+id/home_fragment_to_search_fragment"
+            app:destination="@id/search_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/class_fragment"
+        android:name="com.xiong.recipes.ui.classification.ClassificationFragment"
+        android:label="classfication"
+        tools:layout="@layout/fragment_classfication"
+        >
+        <action
+            android:id="@+id/class_fragment_to_food_detail_fragment"
+            app:destination="@id/food_detail_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/kitchen_fragment"
+        android:name="com.xiong.recipes.ui.kitchen.KitchenFragment"
+        android:label="kitchen"
+        tools:layout="@layout/fragment_kitchen"
+        >
+        <action
+            android:id="@+id/kitchen_to_add_food_fragment"
+            app:destination="@id/add_food_fragment" />
+
+        <action
+            android:id="@+id/kitchen_to_login_fragment"
+            app:destination="@id/login_fragment"
+            />
+        <action
+            android:id="@+id/kitchen_to_food_detail_fragment"
+            app:destination="@id/food_detail_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/mime_fragment"
+        android:name="com.xiong.recipes.ui.mine.MineFragment"
+        android:label="mine"
+        tools:layout="@layout/fragment_mine"
+        >
+        <action
+            android:id="@+id/mime_to_login_fragment"
+            app:destination="@id/login_fragment"
+            />
+        <action
+            android:id="@+id/mime_to_update_user_fragment"
+            app:destination="@id/update_user_fragment"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/food_detail_fragment"
+        android:name="com.xiong.recipes.ui.detail.FoodDetailFragment"
+        android:label="food_detail"
+        tools:layout="@layout/fragment_food_detail">
+    <argument
+        android:name="food"
+        app:argType="string"
+        />
+    </fragment>
+
+    <fragment
+        android:id="@+id/search_fragment"
+        android:name="com.xiong.recipes.ui.search.SearchFragment"
+        android:label="search"
+        tools:layout="@layout/fragment_search_layout"
+        >
+        <action
+            android:id="@+id/search_fragment_to_food_detail_fragment"
+            app:destination="@id/food_detail_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/login_fragment"
+        android:name="com.xiong.recipes.ui.mine.LoginFragment"
+        android:label="login"
+        tools:layout="@layout/fragment_login"
+        >
+        <action
+            android:id="@+id/login_to_regist_fragment"
+            app:destination="@id/regist_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/regist_fragment"
+        android:name="com.xiong.recipes.ui.mine.RegistFragment"
+        android:label="regist"
+        tools:layout="@layout/fragment_regist"
+        >
+        <action
+            android:id="@+id/regist_to_login"
+            app:destination="@id/login_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/update_user_fragment"
+        android:name="com.xiong.recipes.ui.mine.UpdateUserFragment"
+        android:label="update_user"
+        tools:layout="@layout/fragment_update_user"
+        >
+        <action
+            android:id="@+id/update_user_to_login_fragment"
+            app:destination="@id/login_fragment"
+            app:popUpTo="@id/update_user_fragment"
+            app:popUpToInclusive="true"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/add_food_fragment"
+        android:name="com.xiong.recipes.ui.kitchen.AddFoodFragment"
+        android:label="add_food"
+        tools:layout="@layout/fragment_add_food"
+        >
+    </fragment>
+
+
+</navigation>

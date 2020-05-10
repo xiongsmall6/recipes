@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="HeadView">
+        <attr name="left_text_color" format="color"/>
+        <attr name="left_text" format="string"/>
+        <attr name="left_text_visible" format="boolean"/>
+        <attr name="center_text_color" format="color"/>
+        <attr name="center_text" format="string"/>
+        <attr name="center_text_visible" format="boolean"/>
+        <attr name="right_img_visible" format="boolean"/>
+        <attr name="right_text_visible" format="boolean"/>
+    </declare-styleable>
+
+</resources>
